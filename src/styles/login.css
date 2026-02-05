@@ -1,0 +1,131 @@
+.login-container {
+  width: 300px;
+  margin: 120px auto;
+  padding: 30px;
+  border: 2px solid #1890ff;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .login-container {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border-color: #40a9ff;
+}
+
+.login-container h2 {
+  color: #1890ff;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+[data-theme="dark"] .login-container h2 {
+  color: #40a9ff;
+}
+
+.login-container input {
+  width: 100%;
+  margin: 12px 0;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+[data-theme="dark"] .login-container input {
+  background-color: #262626;
+  color: #ffffff;
+  border-color: #434343;
+}
+
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding: 10px 35px 10px 10px;
+  margin: 0;
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+[data-theme="dark"] .password-input-wrapper input {
+  background-color: #262626;
+  color: #ffffff;
+  border-color: #434343;
+  padding: 10px 35px 10px 10px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  height: 24px;
+  width: 24px;
+  opacity: 0.6;
+}
+
+.password-toggle:hover {
+  opacity: 1;
+}
+
+.password-toggle:focus {
+  outline: none;
+  opacity: 1;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.login-button:hover {
+  background-color: #0050b3;
+}
+
+[data-theme="dark"] .login-button {
+  background-color: #40a9ff;
+}
+
+[data-theme="dark"] .login-button:hover {
+  background-color: #69c0ff;
+}
