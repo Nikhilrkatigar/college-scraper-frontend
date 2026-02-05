@@ -11,10 +11,11 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const formData = new FormData();
-      formData.append("username", username);
-      formData.append("password", password);
-      const res = await API.post("/auth/login", formData);
+      const res = await API.post("/auth/login", {
+        username,
+        password
+      });
+
       // SAVE SESSION
       localStorage.setItem("token", res.data.access_token);
       localStorage.setItem(
@@ -24,6 +25,7 @@ function Login() {
           role: res.data.role
         })
       );
+
       navigate("/scraper");
     } catch (err) {
       alert("Invalid login");
@@ -55,6 +57,7 @@ function Login() {
           <h2>College Placement</h2>
           <p className="subtitle">Sign in to your account</p>
         </div>
+
         <div className="login-form">
           <div className="input-group">
             <label htmlFor="username">Username</label>
@@ -68,6 +71,7 @@ function Login() {
               autoComplete="username"
             />
           </div>
+
           <div className="input-group">
             <label htmlFor="password">Password</label>
             <div className="password-input-wrapper">
@@ -90,6 +94,7 @@ function Login() {
               </button>
             </div>
           </div>
+
           <button className="login-button" onClick={handleLogin}>
             <span>Sign In</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -97,6 +102,7 @@ function Login() {
             </svg>
           </button>
         </div>
+
         <div className="login-footer">
           <p>Secure authentication powered by College Placement System</p>
         </div>
